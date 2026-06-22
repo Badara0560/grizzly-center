@@ -945,24 +945,24 @@
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Prénom</label>
-              <input type="text" class="form-input" placeholder="Votre prénom" required />
+              <input type="text" id="cf-prenom" class="form-input" placeholder="Votre prénom" required />
             </div>
             <div class="form-group">
               <label class="form-label">Nom</label>
-              <input type="text" class="form-input" placeholder="Votre nom" required />
+              <input type="text" id="cf-nom" class="form-input" placeholder="Votre nom" required />
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">Email</label>
-            <input type="email" class="form-input" placeholder="email@exemple.com" required />
+            <input type="email" id="cf-email" class="form-input" placeholder="email@exemple.com" required />
           </div>
           <div class="form-group">
             <label class="form-label">Téléphone</label>
-            <input type="tel" class="form-input" placeholder="+223 74 72 72 27" />
+            <input type="tel" id="cf-tel" class="form-input" placeholder="+223 74 72 72 27" />
           </div>
           <div class="form-group">
             <label class="form-label">Sujet</label>
-            <select class="form-select form-input">
+            <select id="cf-sujet" class="form-select form-input">
               <option value="">Choisir un sujet…</option>
               <option>Renseignement produit Motorex</option>
               <option>Commande en gros</option>
@@ -973,7 +973,7 @@
           </div>
           <div class="form-group">
             <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+            <textarea id="cf-message" class="form-textarea" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
           </div>
           <button type="submit" class="btn-submit">Envoyer le message →</button>
         </form>
@@ -1072,13 +1072,32 @@
   /* Form */
   function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('.btn-submit');
-    btn.textContent = '✓ Message envoyé !';
+    const form = e.target;
+    const val = id => (document.getElementById(id)?.value || '').trim();
+    const prenom = val('cf-prenom'), nom = val('cf-nom');
+    const email = val('cf-email'), tel = val('cf-tel');
+    const sujet = val('cf-sujet'), message = val('cf-message');
+
+    const lines = [
+      'Bonjour Grizzly Center, nouveau message depuis le site :',
+      '',
+      'Nom : ' + (prenom + ' ' + nom).trim(),
+      'Email : ' + email,
+    ];
+    if (tel) lines.push('Téléphone : ' + tel);
+    if (sujet) lines.push('Sujet : ' + sujet);
+    lines.push('', 'Message :', message);
+
+    const waUrl = 'https://wa.me/22374727227?text=' + encodeURIComponent(lines.join('\n'));
+    window.open(waUrl, '_blank');
+
+    const btn = form.querySelector('.btn-submit');
+    btn.textContent = '✓ Ouverture de WhatsApp…';
     btn.style.background = '#009989';
     setTimeout(() => {
       btn.textContent = 'Envoyer le message →';
       btn.style.background = '';
-      e.target.reset();
+      form.reset();
     }, 3000);
   }
 
