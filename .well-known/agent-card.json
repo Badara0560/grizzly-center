@@ -1,0 +1,15 @@
+{
+  "protocolVersion": "0.3.0",
+  "name": "Grizzly Center",
+  "description": "Distributeur officiel MOTOREX au Mali : huiles et lubrifiants suisses pour motos, autos et industrie. Showroom, coffee bar et lounge à Bamako (Magnambougou).",
+  "url": "https://grizzly-center.onrender.com/",
+  "version": "1.0.0",
+  "documentationUrl": "https://grizzly-center.onrender.com/llms.txt",
+  "provider": { "organization": "Grizzly Center", "url": "https://grizzly-center.onrender.com/" },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "capabilities": { "streaming": false, "pushNotifications": false },
+  "skills": [],
+  "x-contact": { "telephone": "+223 74 72 72 27", "whatsapp": "https://wa.me/22374727227", "email": "contact@grizzlycenter.com" },
+  "x-content-signals": { "search": true, "ai-input": true, "ai-train": true }
+}

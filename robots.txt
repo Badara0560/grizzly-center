@@ -1,0 +1,39 @@
+# Grizzly Center — distributeur officiel MOTOREX au Mali. Le site veut être lu,
+# assistants compris : une seule page, publique.
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Content Signals : recherche, réponses d'assistant et entraînement autorisés.
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+Sitemap: https://grizzly-center.onrender.com/sitemap.xml
