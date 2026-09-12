@@ -1,0 +1,13 @@
+{
+  "name": "grizzly-center",
+  "description": "Grizzly Center, distributeur officiel MOTOREX à Bamako — coordonnées, horaires, services et gamme, en lecture seule.",
+  "version": "1.0.0",
+  "protocolVersion": "2025-06-18",
+  "transport": { "type": "streamable-http", "url": "https://grizzly-center-agents.griot.workers.dev/mcp" },
+  "capabilities": { "tools": {} },
+  "tools": [
+    { "name": "boutique", "description": "Adresse, téléphone, WhatsApp, e-mail et horaires de Grizzly Center, et si la boutique est ouverte en ce moment (heure de Bamako)." },
+    { "name": "services", "description": "Les services proposés par Grizzly Center : vente de lubrifiants, conseil technique, accessoires, vente en gros, coffee bar, formations." },
+    { "name": "gamme", "description": "Les gammes MOTOREX présentées par Grizzly Center (huiles moteur, boîte, freins, antigel, chaîne…) et les usages couverts." }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  // Serveur MCP en lecture seule de Grizzly Center (voir src/worker.js).
+  // Aucune liaison, aucun cron, aucun secret : 0 FCFA sur l'offre gratuite.
+  "name": "grizzly-center-agents",
+  "main": "src/worker.js",
+  "account_id": "a020b189174b723682b80aabbb80c98f",
+  "compatibility_date": "2026-07-01",
+  "workers_dev": true,
+  "observability": { "enabled": true }
+}

@@ -7,9 +7,14 @@
   "documentationUrl": "https://grizzly-center.onrender.com/llms.txt",
   "provider": { "organization": "Grizzly Center", "url": "https://grizzly-center.onrender.com/" },
   "defaultInputModes": ["text/plain"],
-  "defaultOutputModes": ["text/plain"],
+  "defaultOutputModes": ["text/markdown"],
   "capabilities": { "streaming": false, "pushNotifications": false },
-  "skills": [],
+  "skills": [
+    { "id": "boutique", "name": "boutique", "description": "Adresse, téléphone, WhatsApp, e-mail et horaires, et si la boutique est ouverte en ce moment.", "tags": ["MOTOREX", "Bamako", "lubrifiants"] },
+    { "id": "services", "name": "services", "description": "Les services proposés : vente de lubrifiants, conseil technique, accessoires, vente en gros, coffee bar, formations.", "tags": ["MOTOREX", "Bamako", "lubrifiants"] },
+    { "id": "gamme", "name": "gamme", "description": "Les gammes MOTOREX présentées et les usages couverts.", "tags": ["MOTOREX", "Bamako", "lubrifiants"] }
+  ],
+  "x-mcp": "https://grizzly-center-agents.griot.workers.dev/mcp",
   "x-contact": { "telephone": "+223 74 72 72 27", "whatsapp": "https://wa.me/22374727227", "email": "contact@grizzlycenter.com" },
   "x-content-signals": { "search": true, "ai-input": true, "ai-train": true }
 }

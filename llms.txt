@@ -4,6 +4,8 @@
 
 ## Ce que le site publie
 - https://grizzly-center.onrender.com/ — la page unique : la gamme MOTOREX (moto, auto, industrie), le showroom, les coordonnées et les horaires, lisibles sans JavaScript.
+- https://grizzly-center.onrender.com/index.html.md — la même page en Markdown, pour les assistants.
+- https://grizzly-center-agents.griot.workers.dev/mcp — un serveur MCP en lecture seule (outils `boutique`, `services`, `gamme`), déclaré dans /.well-known/mcp.json.
 - Le formulaire de contact prépare un message WhatsApp ; aucune commande en ligne.
 
 ## Coordonnées
